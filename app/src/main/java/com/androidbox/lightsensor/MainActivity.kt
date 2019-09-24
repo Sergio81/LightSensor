@@ -127,12 +127,10 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     private fun changeBrightness(value: Float) {
-        val lp = window.attributes
-        var total = maxBrightness - minBrightness
+        val total = (value * (maxBrightness - minBrightness)) / 100
 
-        total = (value * total) / 100
-
-        lp.screenBrightness = ((value * total) / 100) + minBrightness //value/100
-        window.attributes = lp
+        window.attributes = window.attributes.apply {
+            screenBrightness = ((value * total) / 100) + minBrightness
+        }
     }
 }
