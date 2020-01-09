@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var sensorManager: SensorManager
     private var lightSensor: Sensor? = null
     private val maxValue = 200f
-    private val minValue = 0f
+//    private val minValue = 0f
 
     private var minBrightness = 0f
     private var maxBrightness = 100f
