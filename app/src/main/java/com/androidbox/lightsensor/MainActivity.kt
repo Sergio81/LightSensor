@@ -73,8 +73,7 @@ class MainActivity : AppCompatActivity(), SensorEventListener {
     }
 
     private fun getConditionValue(luminosity: Float): Float {
-        if (luminosity > maxValue)
-            return 100f
+        if (luminosity > maxValue) return 100f
 
         return ((luminosity * 100) / maxValue)
     }
